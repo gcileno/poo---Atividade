@@ -7,7 +7,7 @@ void main() {
 MaterialApp app = MaterialApp(
     theme: ThemeData(primarySwatch: Colors.deepPurple),
     home: Scaffold(
-      appBar: AppBar(title: Text("DevBAR")),
+      appBar: Menubar(),
       body: Corpo(),
       bottomNavigationBar: Barranav(objects: [
         Icon(Icons.coffee_maker_sharp),
@@ -17,6 +17,17 @@ MaterialApp app = MaterialApp(
         Icon(Icons.devices_sharp)
       ]),
     ));
+
+class Menubar extends AppBar {
+  Menubar()
+      : super(
+          title: Text("DevBar"),
+          leading: IconButton(
+            icon: Icon(Icons.menu_book_outlined),
+            onPressed: () {},
+          ),
+        );
+}
 
 class Corpo extends StatelessWidget {
   Corpo();
