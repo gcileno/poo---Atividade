@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
+  var lista = ["casa", "apartamento", "chacara"];
   runApp(app);
 }
 
@@ -8,7 +9,7 @@ MaterialApp app = MaterialApp(
     theme: ThemeData(primarySwatch: Colors.deepPurple),
     home: Scaffold(
       appBar: Menubar(),
-      body: Corpo(),
+      body: Center(child: Corpo()),
       bottomNavigationBar: Barranav(objects: [
         Icon(Icons.coffee_maker_sharp),
         Icon(Icons.local_drink_sharp),
@@ -19,18 +20,12 @@ MaterialApp app = MaterialApp(
     ));
 
 class Menubar extends AppBar {
-  Menubar()
-      : super(
-          title: Text("DevBar"),
-          leading: IconButton(
-            icon: Icon(Icons.menu_book_outlined),
-            onPressed: () {},
-          ),
-        );
+  Menubar() : super(title: Text("DevBar"), actions: []);
 }
 
 class Corpo extends StatelessWidget {
-  Corpo();
+  List<String> objcts;
+  Corpo({this.objcts = const []});
 
   @override
   Widget build(BuildContext context) {
