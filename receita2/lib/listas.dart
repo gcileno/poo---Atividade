@@ -33,6 +33,38 @@ List<String> cerva = [
   "Belhaven Scottish Ale - Scottish Ale - 21 ibu"
 ];
 
+var cafe = [
+  {"nome": "Ethiopian Yirgacheffe", "torra": "média"},
+  {"nome": "Panama Geisha", "torra": "leve"},
+  {"nome": "Jamaican Blue Mountain", "torra": "média"},
+  {"nome": "Hawaiian Kona", "torra": "média"},
+  {"nome": "Guatemala Antigua", "torra": "média"},
+  {"nome": "Costa Rica Tarrazu", "torra": "média"},
+  {"nome": "Sumatra Mandheling", "torra": "escura"},
+  {"nome": "Kenya AA", "torra": "média"},
+  {"nome": "Tanzania Peaberry", "torra": "média"},
+  {"nome": "Brazil Santos Bourbon", "torra": "média"},
+  {"nome": "Mexico Altura", "torra": "média"},
+  {"nome": "Colombian Supremo", "torra": "média"},
+  {"nome": "Nicaragua Matagalpa", "torra": "média"},
+  {"nome": "El Salvador Pacamara", "torra": "média"},
+  {"nome": "Honduras Marcala", "torra": "média"},
+  {"nome": "India Monsooned Malabar", "torra": "escura"},
+  {"nome": "Ethiopian Sidamo", "torra": "média"},
+  {"nome": "Yemen Mocha", "torra": "média"},
+  {"nome": "Puerto Rico Yauco Selecto", "torra": "média"},
+  {"nome": "Jamaican High Mountain Supreme", "torra": "média"},
+  {"nome": "Papua New Guinea Sigri Estate", "torra": "média"},
+  {"nome": "Indonesia Sulawesi Toraja", "torra": "média"},
+  {"nome": "Costa Rica Tres Rios", "torra": "média"},
+  {"nome": "Mexico Pluma Altura", "torra": "média"},
+  {"nome": "Dominican Republic Barahona", "torra": "média"},
+  {"nome": "Guatemala Huehuetenango", "torra": "média"},
+  {"nome": "Colombia Popayan Supremo", "torra": "média"},
+  {"nome": "Panama Boquete", "torra": "média"},
+  {"nome": "Brazil Cerrado", "torra": "média"},
+];
+
 List<Icon> iconico = [
   Icon(Icons.coffee_maker_sharp),
   Icon(Icons.local_drink_sharp),
