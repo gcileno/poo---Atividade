@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'listas.dart';
 
@@ -13,7 +15,7 @@ MaterialApp app = MaterialApp(
       appBar: Menubar(),
       body: Center(
           child: Corpo(
-        objects: cerva,
+        objetos: cerve,
       )),
       bottomNavigationBar: Barranav(objects: iconico),
     ));
@@ -56,21 +58,37 @@ class Menubar extends AppBar {
 }
 
 class Corpo extends StatelessWidget {
-  List<String> objects;
-  Corpo({this.objects = const []});
+  List<Map<String, dynamic>> objetos;
+  Corpo({this.objetos = const []});
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      ...objects
-          .map(
-            (obj) => Expanded(child: Text(obj)),
-          )
-          .toList(),
-    ]);
+    return ListView.builder(
+        itemCount: objetos.length,
+        itemBuilder: (context, index) {
+          final obj = objetos.elementAt(index);
+          return DataTable(
+              columns: obj.keys
+                  .map(
+                    (e) => DataColumn(
+                      label: Expanded(
+                        child: Text(e.toString()),
+                      ),
+                    ),
+                  )
+                  .toList(),
+              //columns:  obj.keys.map((e) => DataColumn(label: Text(e))).toList(),
+              rows: [
+                DataRow(
+                    cells: obj.values
+                        .map((e) => DataCell(Text(e.toString())))
+                        .toList())
+              ]);
+        });
   }
 }
 
+//navBar
 class Barranav extends StatelessWidget {
   List<Icon> objects;
 

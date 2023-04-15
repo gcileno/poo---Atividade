@@ -1,5 +1,35 @@
 import 'package:flutter/material.dart';
 
+var cerve = [
+  {"name": "La Fin Du Monde", "style": "Bock", "ibu": "65"},
+  {"name": "Sapporo Premiume", "style": "Sour Ale", "ibu": "54"},
+  {"name": "Duvel", "style": "Pilsner", "ibu": "82"},
+  {"name": "Westvleteren 12", "style": "Belgian Quadrupel", "ibu": "42"},
+  {"name": "Weihenstephaner Hefeweissbier", "style": "Hefeweizen", "ibu": "14"},
+  {"name": "Guinness Draught", "style": "Irish Dry Stout", "ibu": "45"},
+  {"name": "Chimay Blue", "style": "Belgian Strong Dark Ale", "ibu": "30"},
+  {"name": "Tripel Karmeliet", "style": "Belgian Tripel", "ibu": "28"},
+  {"name": "St. Bernardus Abt 12", "style": "Belgian Quadrupel", "ibu": "22"},
+  {"name": "Weihenstephaner Vitus", "style": "Weizenbock", "ibu": "17"},
+  {"name": "Rochefort 10", "style": "Belgian Quadrupel", "ibu": "27"},
+  {"name": "Augustiner Helles", "style": "Munich Helles", "ibu": "20"},
+  {"name": "Paulaner Hefe-Weissbier", "style": "Hefeweizen", "ibu": "12"},
+  {"name": "Pilsner Urquell", "style": "Czech Pilsner", "ibu": "40"},
+  {"name": "Orval", "style": "Belgian Pale Ale", "ibu": "36"},
+  {"name": "Rauchbier Märzen", "style": "Rauchbier", "ibu": "30"},
+  {"name": "Weihenstephaner Original", "style": "Munich Helles", "ibu": "21"},
+  {"name": "Anchor Steam Beer", "style": "California Common", "ibu": "33"},
+  {"name": "Hoegaarden Witbier", "style": "Witbier", "ibu": "15"},
+  {"name": "Schneider Weisse Aventinus", "style": "Weizenbock", "ibu": "16"},
+  {"name": "Hop Rod Rye", "style": "American IPA", "ibu": "80"},
+  {"name": "Brooklyn Lager", "style": "American Amber Lager", "ibu": "33"},
+  {
+    "name": "Arrogant Bastard Ale",
+    "style": "American Strong Ale",
+    "ibu": "100+"
+  }
+];
+
 List<String> cerva = [
   "La Fin Du Monde - Bock - 65 ibu",
   "Sapporo Premiume - Sour Ale - 54 ibu",
@@ -70,3 +100,4 @@ List<Icon> iconico = [
   Icon(Icons.local_drink_sharp),
   Icon(Icons.flag_sharp),
 ];
+
