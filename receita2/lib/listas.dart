@@ -95,9 +95,95 @@ var cafe = [
   {"nome": "Brazil Cerrado", "torra": "média"},
 ];
 
+var paises = [
+  {
+    "pais": "Estados Unidos",
+    "pib": "\$22,675 trilhões",
+    "salario_medio": "\$68.703",
+    "populacao": "331.449.281",
+    "presidente": "Joe Biden"
+  },
+  {
+    "pais": "China",
+    "pib": "\$16,159 trilhões",
+    "salario_medio": "\$12.190",
+    "populacao": "1.397.897.720",
+    "presidente": "Xi Jinping"
+  },
+  {
+    "pais": "Japão",
+    "pib": "\$5,154 trilhões",
+    "salario_medio": "\$32.105",
+    "populacao": "125.960.000",
+    "presidente": "Naruhito"
+  },
+  {
+    "pais": "Alemanha",
+    "pib": "\$4,238 trilhões",
+    "salario_medio": "\$44.719",
+    "populacao": "83.149.300",
+    "presidente": "Frank-Walter Steinmeier"
+  },
+  {
+    "pais": "Reino Unido",
+    "pib": "\$2,622 trilhões",
+    "salario_medio": "\$43.709",
+    "populacao": "68.207.116",
+    "presidente": "Charles, Príncipe de Gales"
+  },
+  {
+    "pais": "França",
+    "pib": "\$2,582 trilhões",
+    "salario_medio": "\$42.875",
+    "populacao": "67.408.000",
+    "presidente": "Emmanuel Macron"
+  },
+  {
+    "pais": "Índia",
+    "pib": "\$2,611 trilhões",
+    "salario_medio": "\$2.041",
+    "populacao": "1.380.004.385",
+    "presidente": "Ram Nath Kovind"
+  },
+  {
+    "pais": "Itália",
+    "pib": "\$2,087 trilhões",
+    "salario_medio": "\$31.262",
+    "populacao": "60.246.951",
+    "presidente": "Sergio Mattarella"
+  },
+  {
+    "pais": "Brasil",
+    "pib": "\$1,449 trilhões",
+    "salario_medio": "\$5.109",
+    "populacao": "213.993.437",
+    "presidente": "Jair Bolsonaro"
+  },
+  {
+    "pais": "Canadá",
+    "pib": "\$1,655 trilhões",
+    "salario_medio": "\$55.035",
+    "populacao": "38.048.738",
+    "presidente": "Julie Payette"
+  },
+  {
+    "pais": "Coreia do Sul",
+    "pib": "\$1,630 trilhões",
+    "salario_medio": "\$28.159",
+    "populacao": "51.780.579",
+    "presidente": "Moon Jae-in"
+  },
+  {
+    "pais": "Rússia",
+    "pib": "\$1,707 trilhões",
+    "salario_medio": "\$7.693",
+    "populacao": "55.580.579",
+    "presidente": "Putin",
+  }
+];
+
 List<Icon> iconico = [
   Icon(Icons.coffee_maker_sharp),
   Icon(Icons.local_drink_sharp),
   Icon(Icons.flag_sharp),
 ];
-

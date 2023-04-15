@@ -15,7 +15,7 @@ MaterialApp app = MaterialApp(
       appBar: Menubar(),
       body: Center(
           child: Corpo(
-        objetos: cerve,
+        objetos: paises,
       )),
       bottomNavigationBar: Barranav(objects: iconico),
     ));
@@ -72,12 +72,13 @@ class Corpo extends StatelessWidget {
                   .map(
                     (e) => DataColumn(
                       label: Expanded(
-                        child: Text(e.toString()),
+                        child: Text(
+                            e.toString().toUpperCase().replaceAll("_", " "),
+                            style: TextStyle(fontStyle: FontStyle.italic)),
                       ),
                     ),
                   )
                   .toList(),
-              //columns:  obj.keys.map((e) => DataColumn(label: Text(e))).toList(),
               rows: [
                 DataRow(
                     cells: obj.values
