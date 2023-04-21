@@ -1,3 +1,4 @@
+import 'mywidget.dart';
 import 'package:flutter/material.dart';
 import 'listas.dart';
 
@@ -10,13 +11,11 @@ void main() {
 MaterialApp app = MaterialApp(
     theme: ThemeData(primarySwatch: Colors.deepPurple),
     home: Scaffold(
-      appBar: Menubar(),
-      body: Center(
-          child: Corpo(
-        objects: cerva,
-      )),
-      bottomNavigationBar: Barranav(objects: iconico),
-    ));
+        appBar: Menubar(),
+        body: MostrarDados(
+          objetos: cerva,
+        ),
+        bottomNavigationBar: Barranav(objects: iconico)));
 
 class Menubar extends AppBar {
   Menubar()
@@ -55,22 +54,7 @@ class Menubar extends AppBar {
         );
 }
 
-class Corpo extends StatelessWidget {
-  List<String> objects;
-  Corpo({this.objects = const []});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(children: [
-      ...objects
-          .map(
-            (obj) => Expanded(child: Text(obj)),
-          )
-          .toList(),
-    ]);
-  }
-}
-
+//navBar
 class Barranav extends StatelessWidget {
   List<Icon> objects;
 
