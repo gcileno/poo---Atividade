@@ -1,5 +1,4 @@
-import 'dart:math';
-
+import 'mywidget.dart';
 import 'package:flutter/material.dart';
 import 'listas.dart';
 
@@ -12,13 +11,11 @@ void main() {
 MaterialApp app = MaterialApp(
     theme: ThemeData(primarySwatch: Colors.deepPurple),
     home: Scaffold(
-      appBar: Menubar(),
-      body: Center(
-          child: Corpo(
-        objetos: paises,
-      )),
-      bottomNavigationBar: Barranav(objects: iconico),
-    ));
+        appBar: Menubar(),
+        body: MostrarDados(
+          objetos: cerva,
+        ),
+        bottomNavigationBar: Barranav(objects: iconico)));
 
 class Menubar extends AppBar {
   Menubar()
@@ -55,38 +52,6 @@ class Menubar extends AppBar {
           ),
           title: Text("DevBar"),
         );
-}
-
-class Corpo extends StatelessWidget {
-  List<Map<String, dynamic>> objetos;
-  Corpo({this.objetos = const []});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-        itemCount: objetos.length,
-        itemBuilder: (context, index) {
-          final obj = objetos.elementAt(index);
-          return DataTable(
-              columns: obj.keys
-                  .map(
-                    (e) => DataColumn(
-                      label: Expanded(
-                        child: Text(
-                            e.toString().toUpperCase().replaceAll("_", " "),
-                            style: TextStyle(fontStyle: FontStyle.italic)),
-                      ),
-                    ),
-                  )
-                  .toList(),
-              rows: [
-                DataRow(
-                    cells: obj.values
-                        .map((e) => DataCell(Text(e.toString())))
-                        .toList())
-              ]);
-        });
-  }
 }
 
 //navBar
