@@ -12,9 +12,7 @@ MaterialApp app = MaterialApp(
     theme: ThemeData(primarySwatch: Colors.deepPurple),
     home: Scaffold(
         appBar: Menubar(),
-        body: MostrarDados(
-          objetos: cerva,
-        ),
+        body: Myform(),
         bottomNavigationBar: Barranav(objects: iconico)));
 
 class Menubar extends AppBar {
