@@ -42,10 +42,10 @@ MaterialApp app = MaterialApp(
         body: ValueListenableBuilder(
             valueListenable: tela.tableStateNotifier,
             builder: (_, value, __) {
-              return MostrarDados(objetos: value);
+              return MostrarDados(objetos: value.cast<Map<String, dynamic>>());
             }),
         bottomNavigationBar:
-            Nav(objects: iconico, itemSelectedCallback: tela.carregar)));
+            Nav(meuincone: iconico, itemSelectedCallback: tela.carregar)));
 
 class Menubar extends AppBar {
   Menubar()

@@ -4,8 +4,8 @@ import 'listas.dart';
 
 //mostrar tabelas
 class MostrarDados extends StatelessWidget {
-  List objetos;
-  //List<Map<String, dynamic>> objetos;
+  //final List objetos;
+  List<Map<String, dynamic>> objetos;
   MostrarDados({this.objetos = const []});
 
   @override
@@ -46,10 +46,10 @@ class MostrarDados extends StatelessWidget {
 
 //barra inferior
 class Nav extends HookWidget {
-  List<Icon> objects;
+  List<Icon> meuincone;
 
   var itemSelectedCallback;
-  Nav({this.objects = const [], this.itemSelectedCallback}) {
+  Nav({this.meuincone = const [], this.itemSelectedCallback}) {
     itemSelectedCallback ??= (_) {};
   }
 
@@ -63,7 +63,7 @@ class Nav extends HookWidget {
           itemSelectedCallback(index);
         },
         currentIndex: state.value,
-        items: objects
+        items: meuincone
             .map(
               (obj) => BottomNavigationBarItem(label: "", icon: obj),
             )
