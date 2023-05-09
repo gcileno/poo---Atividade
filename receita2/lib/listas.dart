@@ -28,7 +28,7 @@ var cerva = [
     "style": "American Strong Ale",
     "ibu": "100+"
   }
-];
+];  
 
 var cafe = [
   {"nome": "Ethiopian Yirgacheffe", "torra": "média"},
@@ -231,3 +231,5 @@ List<Icon> iconico = [
   Icon(Icons.local_drink_sharp),
   Icon(Icons.flag_sharp),
 ];
+
+var telas = [cafe, cerva, paises];
