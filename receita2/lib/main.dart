@@ -2,6 +2,33 @@ import 'mywidget.dart';
 import 'package:flutter/material.dart';
 import 'listas.dart';
 
+class Telas {
+  final ValueNotifier<List> tableStateNotifier = new ValueNotifier([]);
+
+  void carregar(index) {
+    final carregadores = [
+      () => carregarCafe(),
+      () => carregarCervejas(),
+      () => carregarPaises(),
+    ];
+    carregadores[index]();
+  }
+
+  void carregarCervejas() {
+    tableStateNotifier.value = cerva;
+  }
+
+  void carregarCafe() {
+    tableStateNotifier.value = cafe;
+  }
+
+  void carregarPaises() {
+    tableStateNotifier.value = paises;
+  }
+}
+
+final tela = Telas();
+
 void main() {
   runApp(app);
 }
@@ -12,8 +39,13 @@ MaterialApp app = MaterialApp(
     theme: ThemeData(primarySwatch: Colors.deepPurple),
     home: Scaffold(
         appBar: Menubar(),
-        body: Myform(),
-        bottomNavigationBar: Barranav(objects: iconico)));
+        body: ValueListenableBuilder(
+            valueListenable: tela.tableStateNotifier,
+            builder: (_, value, __) {
+              return MostrarDados(objetos: value.cast<Map<String, dynamic>>());
+            }),
+        bottomNavigationBar:
+            Nav(meuincone: iconico, itemSelectedCallback: tela.carregar)));
 
 class Menubar extends AppBar {
   Menubar()
@@ -50,26 +82,4 @@ class Menubar extends AppBar {
           ),
           title: Text("DevBar"),
         );
-}
-
-//navBar
-class Barranav extends StatelessWidget {
-  List<Icon> objects;
-
-  Barranav({this.objects = const []});
-
-  void botaoFoiTocado(int index) {
-    print("Tocaram no botão $index");
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-        onTap: botaoFoiTocado,
-        items: objects
-            .map(
-              (obj) => BottomNavigationBarItem(label: "", icon: obj),
-            )
-            .toList());
-  }
 }

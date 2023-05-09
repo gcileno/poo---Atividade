@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-var cerva = [
+final cerva = [
   {"name": "La Fin Du Monde", "style": "Bock", "ibu": "65"},
   {"name": "Sapporo Premiume", "style": "Sour Ale", "ibu": "54"},
   {"name": "Duvel", "style": "Pilsner", "ibu": "82"},
@@ -31,35 +31,21 @@ var cerva = [
 ];
 
 var cafe = [
-  {"nome": "Ethiopian Yirgacheffe", "torra": "média"},
-  {"nome": "Panama Geisha", "torra": "leve"},
-  {"nome": "Jamaican Blue Mountain", "torra": "média"},
-  {"nome": "Hawaiian Kona", "torra": "média"},
-  {"nome": "Guatemala Antigua", "torra": "média"},
-  {"nome": "Costa Rica Tarrazu", "torra": "média"},
-  {"nome": "Sumatra Mandheling", "torra": "escura"},
-  {"nome": "Kenya AA", "torra": "média"},
-  {"nome": "Tanzania Peaberry", "torra": "média"},
-  {"nome": "Brazil Santos Bourbon", "torra": "média"},
-  {"nome": "Mexico Altura", "torra": "média"},
-  {"nome": "Colombian Supremo", "torra": "média"},
-  {"nome": "Nicaragua Matagalpa", "torra": "média"},
-  {"nome": "El Salvador Pacamara", "torra": "média"},
-  {"nome": "Honduras Marcala", "torra": "média"},
-  {"nome": "India Monsooned Malabar", "torra": "escura"},
-  {"nome": "Ethiopian Sidamo", "torra": "média"},
-  {"nome": "Yemen Mocha", "torra": "média"},
-  {"nome": "Puerto Rico Yauco Selecto", "torra": "média"},
-  {"nome": "Jamaican High Mountain Supreme", "torra": "média"},
-  {"nome": "Papua New Guinea Sigri Estate", "torra": "média"},
-  {"nome": "Indonesia Sulawesi Toraja", "torra": "média"},
-  {"nome": "Costa Rica Tres Rios", "torra": "média"},
-  {"nome": "Mexico Pluma Altura", "torra": "média"},
-  {"nome": "Dominican Republic Barahona", "torra": "média"},
-  {"nome": "Guatemala Huehuetenango", "torra": "média"},
-  {"nome": "Colombia Popayan Supremo", "torra": "média"},
-  {"nome": "Panama Boquete", "torra": "média"},
-  {"nome": "Brazil Cerrado", "torra": "média"},
+  {"nome": "Café do Brasil", "torragem": "Média", "acidez": "1.5%"},
+  {"nome": "Café Colombiano", "torragem": "Escura", "acidez": "0.8%"},
+  {"nome": "Café da Etiópia", "torragem": "Clara", "acidez": "2.0%"},
+  {"nome": "Café do Panamá", "torragem": "Média", "acidez": "1.8%"},
+  {"nome": "Café Guatemalteco", "torragem": "Escura", "acidez": "1.2%"},
+  {"nome": "Café do Quênia", "torragem": "Clara", "acidez": "2.5%"},
+  {"nome": "Café do México", "torragem": "Média", "acidez": "1.6%"},
+  {"nome": "Café Nicaraguense", "torragem": "Escura", "acidez": "1.4%"},
+  {"nome": "Café Peruano", "torragem": "Clara", "acidez": "2.2%"},
+  {"nome": "Café de Ruanda", "torragem": "Média", "acidez": "1.9%"},
+  {"nome": "Café do Sul da Índia", "torragem": "Escura", "acidez": "1.1%"},
+  {"nome": "Café do Vietnã", "torragem": "Clara", "acidez": "2.3%"},
+  {"nome": "Café da Indonésia", "torragem": "Média", "acidez": "1.7%"},
+  {"nome": "Café da Jamaica", "torragem": "Escura", "acidez": "1.0%"},
+  {"nome": "Café de Papua Nova Guiné", "torragem": "Clara", "acidez": "2.1%"}
 ];
 
 var paises = [
@@ -231,3 +217,5 @@ List<Icon> iconico = [
   Icon(Icons.local_drink_sharp),
   Icon(Icons.flag_sharp),
 ];
+
+var telas = [cafe, cerva, paises];
