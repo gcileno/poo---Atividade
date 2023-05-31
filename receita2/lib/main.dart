@@ -2,31 +2,6 @@ import 'mywidget.dart';
 import 'package:flutter/material.dart';
 import 'listas.dart';
 
-class Telas {
-  final ValueNotifier<List> tableStateNotifier = new ValueNotifier([]);
-
-  void carregar(index) {
-    final carregadores = [
-      () => carregarCafe(),
-      () => carregarCervejas(),
-      () => carregarPaises(),
-    ];
-    carregadores[index]();
-  }
-
-  void carregarCervejas() {
-    tableStateNotifier.value = cerva;
-  }
-
-  void carregarCafe() {
-    tableStateNotifier.value = cafe;
-  }
-
-  void carregarPaises() {
-    tableStateNotifier.value = paises;
-  }
-}
-
 final tela = Telas();
 
 void main() {
@@ -42,7 +17,7 @@ MaterialApp app = MaterialApp(
         body: ValueListenableBuilder(
             valueListenable: tela.tableStateNotifier,
             builder: (_, value, __) {
-              return MostrarDados(objetos: value.cast<Map<String, dynamic>>());
+              return MostrarJson(objetos: value.cast());
             }),
         bottomNavigationBar:
             Nav(meuincone: iconico, itemSelectedCallback: tela.carregar)));
